@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        let user = {
+            name: "Muhammad Younas",
+            age: 23,
+            profession: "Web Developer",
+            email: "myounas8776@gmail.com",
+            admine: true,
+        }
+        for (let key in user) {
+
+            if (key === "age") {
+                continue;
+            }
+
+            if (key === "email") {
+                break;
+            }
+
+            console.log(key + " is " + user[key]);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>For...in Loop Example</h1>
+</body>
+
+</html>

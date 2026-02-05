@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function getInputValue() {
+            let inputValue = document.getElementById("name").value;
+            console.log(inputValue);
+            document.getElementById("heading").innerText = inputValue;
+        }
+
+        function setInputValue() {
+            let value = "Code Step By Step";
+            document.getElementById("name").value = value;
+        }
+
+        function removeInputValue() {
+            document.getElementById("name").value = "";
+        }
+
+
+        function copyInputValue(){
+             let whoValue = document.getElementById("who").value;
+             document.getElementById("name").value= whoValue;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="heading"></h1>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <input type="text" id="who" placeholder="Other Name " />
+    <br>
+    <br>
+    <br>
+    <button onclick="getInputValue()"> Get Value </button>
+    <button onclick="setInputValue()"> set Value </button>
+    <button onclick="removeInputValue()"> Remove Value </button>
+     <button onclick="copyInputValue()"> Copy Value </button>
+   
+</body>
+
+</html>
