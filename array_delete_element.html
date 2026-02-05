@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>inArray delection file</h1>
+    <br>
+    <span> Delete Array Element</span>
+    <br>
+    <input type="text" onblur="deleteItem(event)" placeholder="enter Position ">
+
+    <script>
+        let users = ["Muhammad", "younas", "khan", "john"];
+        // console.log(users);
+        // users.shift(); use for deleting the first element of the array 
+        // users.pop();
+        // users.splice(1, 3);
+        // console.log(users);
+
+        function deleteItem(event) {
+            let pos = event.target.value
+            if (pos > users.length - 1) {
+                alert("the position is invalid ")
+            } else {
+                users.splice(pos, 1)
+                console.log(users);
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
