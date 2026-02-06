@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Adding element in Array</h1>
+    <span>Element Position </span>
+    <input type="text" id="position" placeholder="Enter the position">
+    <br>
+    <br>
+
+    <span>Element Value </span>
+    <input type="text" id="value" placeholder="Enter the value">
+    <br>
+    <br>
+    <button onclick="addElement()"> Add Element</button>
+    <script>
+        let users = ["Muhammad", "Younas", "Khan"];
+        console.log(users);
+        // users.push("John");
+        // users.unshift("ali ");
+        // users.splice(1, 0, "hassan");
+        // console.log(users)
+        function addElement(){
+            let val = document.getElementById("value").value;
+            let pos = document.getElementById("position").value;
+            users.splice(pos, 0 , val);
+            console.log(users);
+        }
+
+    </script>
+</body>
+
+</html>
