@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Add and display object on UI</h1>
+
+    <input id="key" type="text" placeholder="enter key ">
+    <input id="value" type="text" placeholder="enter value">
+    <button onclick="addNewData()">Add New Data</button>
+
+    <ul id="user-UL"></ul>
+
+    <script>
+        let userDetails = {
+            name: "Muhammad Younas",
+            email_id: "muh.youanasdev3@gmail.com",
+            address: "Swat"
+        };
+
+        function displayObject() {
+            let userEl = document.getElementById("user-UL");
+            userEl.innerHTML = "";
+
+            for (let key in userDetails) {
+                userEl.innerHTML += "<li>" + key + "  is " + userDetails[key] + "</li>";
+            }
+        }
+        function addNewData() {
+            let key = document.getElementById('key').value;
+            let value = document.getElementById('value').value
+            console.log(key, value);
+            userDetails[key] = value;
+            console.log(userDetails)
+            displayObject();
+
+        }
+        displayObject();
+    </script>
+
+</body>
+
+</html>
